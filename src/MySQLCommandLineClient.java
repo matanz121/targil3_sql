@@ -1,5 +1,5 @@
  /**
- * Created by Maraee on 4/1/2018.
+ * Edited by Netanel Abutbul on 14/7/2020
  */
 import java.util.Scanner;
 
@@ -30,7 +30,6 @@ public static void main(String[] args) {
                 mySQLClient.createSchema();
                 break;
             case "drop schema":
-
                 mySQLClient.dropSchema();
                 break;
             case "load all" :
@@ -52,7 +51,6 @@ public static void main(String[] args) {
                         mySQLClient.submitPredefinedQuery(queryNum));
                 break;
             case "report":
-
                 int reportNum=Integer.parseInt(commandPar);
                 mySQLClient.createReport(reportNum);
                 break;

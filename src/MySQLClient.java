@@ -7,16 +7,16 @@ import java.util.regex.Pattern;
 public class MySQLClient {
 	private Connection connect = null;
     private Statement stmt = null;
-    static final String dbName = "netanelTargil3";
 
     // DB Information
     static final String DB_URL = "jdbc:mysql://localhost/";
     static final String USER = "root";
     static final String PASS = "Aa123456";
+    static final String dbName = "netanelTargil3";
 
 
 
-    public void createSchema() {  /**/ 
+    public void createSchema() { 
         try {
             connect = DriverManager.getConnection(DB_URL+"?verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC", USER, PASS);
             System.out.println("Creating database");
@@ -253,7 +253,7 @@ public class MySQLClient {
         createCarsOwnedByPeapleTable();      
     }
 
-    private void createPersonsTable() throws SQLException { /*!*/
+    private void createPersonsTable() throws SQLException { 
         String personsTable =
                 "CREATE TABLE IF NOT EXISTS Persons" + "(id int(11) NOT NULL," + "Age int(11) DEFAULT NULL," +
         "Workclass enum('Private', 'Self-emp-not-inc', 'Self-emp-inc', 'Federal-gov', 'Local-gov', 'State-gov', 'Without-pay', 'Never-worked') DEFAULT NULL,"+
@@ -263,11 +263,10 @@ public class MySQLClient {
                 		"Native_country enum('United-States','Cambodia','England','Puerto-Rico','Canada','Germany','Outlying-US(Guam-USVI-etc)','India','Japan','Greece','South','China','Cuba','Iran','Honduras','Philippines','Italy','Poland','Jamaica','Vietnam','Mexico','Portugal','Ireland','France','Dominican-Republic','Laos','Ecuador','Taiwan','Haiti','Columbia','Hungary','Guatemala','Nicaragua','Scotland','Thailand','Yugoslavia','El-Salvador','Trinadad&Tobago','Peru','Hong','Holand-Netherlands') DEFAULT NULL,"
                         +"PRIMARY KEY (id))";
 
-
         stmt.executeUpdate(personsTable);
     }
     
-    private void createMarriedAndDescendants() throws SQLException{ /*!*/
+    private void createMarriedAndDescendants() throws SQLException{ 
     	String relations="CREATE TABLE IF NOT EXISTS Relations"+"(person_id int(11) NOT NULL,"+"relative_id int(11) NOT NULL,"+"relationship enum('wife','husband','child') DEFAULT NULL,\n"
     			+"PRIMARY KEY (person_id,relative_id),"+"FOREIGN KEY (person_id) REFERENCES persons(id))";
     	stmt.executeUpdate(relations);

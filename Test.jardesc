@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="Targil3_sql/exe3.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Targil3_sql/Test.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=Targil3_sql/src&lt;{MySQLCommandLineClient.java[MySQLCommandLineClient" manifestLocation="/Targil3_sql/mainfest.txt" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/Targil3_sql/.classpath"/>
+        <file path="/Targil3_sql/.project"/>
+        <javaElement handleIdentifier="=Targil3_sql/src"/>
+    </selectedElements>
+</jardesc>
